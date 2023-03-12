@@ -48,17 +48,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "FluentAssertions": {
-              "target": "Package",
-              "version": "[6.10.0, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
-            },
-            "NSubstitute": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

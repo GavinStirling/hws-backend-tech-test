@@ -5,10 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using TodoList.Api.Data;
-using TodoList.Api.Logging;
-using TodoList.Api.Repository;
-using TodoList.Api.Services;
 
 namespace TodoList.Api
 {
@@ -42,11 +38,6 @@ namespace TodoList.Api
             });
 
             services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoItemsDB"));
-
-            services.AddScoped<IToDoRepository, ToDoRepository>();
-            services.AddScoped<IToDoService, ToDoService>();
-
-            services.AddTransient(typeof(ILoggerAdapter<>), typeof(LoggerAdapter<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
